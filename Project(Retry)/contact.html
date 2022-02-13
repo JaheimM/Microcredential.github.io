@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="project.css" />
+    <script
+      src="https://kit.fontawesome.com/2b844ee23b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Mobile Navigation -->
+    <section class="mobile_nav">
+      <div><i class="fa-solid fa-circle-xmark fa-2x"></i></div>
+      <div>
+        <div class="logo2">
+          <h1><a href="index.html">Home</a></h1>
+        </div>
+        <div class="links2">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="cart2">
+              <a href="cart.html"
+                ><i class="fa-solid fa-cart-shopping"><span></span></i></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- navigation -->
+    <section>
+      <nav>
+        <div class="logo">
+          <h1><a href="index.html">Home</a></h1>
+        </div>
+        <div class="links">
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#shop">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="cart">
+              <a href="cart.html"
+                ><i class="fa-solid fa-cart-shopping"><span>0</span></i></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="container hamburger">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </nav>
+    </section>
+    <main>
+      <div class="social">
+        <div>
+          <h2>SOCIALS</h2>
+          <ul>
+            <li class=""><i class="fa-brands fa-twitter-square fa-4x"></i></li>
+            <li class=""><i class="fa-brands fa-facebook fa-4x"></i></li>
+            <li class="">
+              <i class="fa-brands fa-instagram-square fa-4x"></i>
+            </li>
+            <li class=""><i class="fa-brands fa-tumblr-square fa-4x"></i></li>
+          </ul>
+        </div>
+        <div>
+          <h3>
+            You can Connect with us and the community here at these Socials.
+          </h3>
+          <h3>
+            You can also email us with any concerns or inquiries
+            <a href="mailto:mangaCollectorsHub@xyz.com">HERE</a>
+          </h3>
+        </div>
+      </div>
+    </main>
+    <script>
+      let hamburger = document.querySelector(".hamburger");
+      let hamburgerOff = document.querySelector(".fa-2x");
+
+      let mobileNav = document.querySelector(".mobile_nav");
+      let body = document.querySelector("body");
+
+      hamburger.addEventListener("click", () => {
+        mobileNav.classList.add("on");
+        body.classList.add("noScroll");
+      });
+
+      hamburgerOff.addEventListener("click", () => {
+        mobileNav.classList.remove("on");
+        body.classList.remove("noScroll");
+      });
+
+      let icon = document.querySelector(".container");
+
+      icon.addEventListener("click", () => {
+        icon.classList.toggle("change");
+      });
+
+      let addToCart = document.querySelectorAll(".add");
+      let cartNums = document.querySelector(".cart span");
+
+      // Loop that iterates for every item added to the bag
+      for (let i = 0; i < addToCart.length; i++) {
+        addToCart[i].addEventListener("click", () => {
+          cartNum(itemsInfo[name]);
+        });
+      }
+
+      // When website is loaded will append the current number of items in bag from previous local storage
+
+      function cartNum() {
+        let itemNum = localStorage.getItem("cartNum");
+
+        itemNum = parseInt(itemNum);
+
+        if (itemNum) {
+          localStorage.setItem("cartNum", itemNum + 1);
+          cartNums.textContent = itemNum + 1;
+        } else {
+          localStorage.setItem("cartNum", 1);
+          cartNums.textContent = 1;
+        }
+      }
+
+      function loadCartNum() {
+        let itemNum = localStorage.getItem("cartNum");
+
+        if (itemNum) {
+          cartNums.textContent = itemNum;
+        }
+      }
+
+      loadCartNum();
+    </script>
+  </body>
+</html>

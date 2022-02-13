@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="cart.css">
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="return">
+          <i class="fa-solid fa-chevron-left fa-2x"></i>
+          <a href="cart.html"><h3>Return</h3></a>
+        </div>
+        <div>
+          <h2>You've got the books, now lets us handle the transaction</h2>
+        </div>
+      </div>
+    </header>
+      <form action="thankyou.html" method="get">
+      <fieldset>
+        <legend>CHECKOUT</legend>
+          <h3>Enter Your Information and get your Book in Two Days!</h3>
+          <span id="items"><p id="price"></p></span>
+          <hr />
+          <label for="username">
+            Enter username:
+            <input type="text" name="username" placeholder="Type Username" id="username" /> </label>
+            <label for="email">
+            Enter email address: <input type="email" name="emailAddress" placeholder="Type Email Address " /></label>
+            <input type="submit" name="submit" value="SUBMIT ORDER" class="submit" /></a>
+          </label>
+      </fieldset>
+    </form>
+  </body>
+</html>
