@@ -726,8 +726,50 @@ h4 {
     width: 50%;
 }
 
+/* -----------------ThankYou.html CSS----------------- */
+
+.thankyou_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 50%;
+}
+
+.border {
+    border: 0.3em double var(--book-color2);
+    width: 80%;
+    margin: 0 auto;
+}
+.flex h1, .flex h2{
+    color: var(--book-color);
+    margin: 0.2em auto;
+}
+
+.flex p {
+    color: #fff12d;
+}
+
+.thankyou {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.thankyou img {
+    width: 30%;
+}
 
 
+/*  Media queries for different view sizes */
 @media  screen and (max-width: 1920px) {
    .background-image {
        background-size: cover;
