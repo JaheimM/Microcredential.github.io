@@ -159,7 +159,7 @@ main {
 .background-image {
     height: 55em;
     width: 100%;
-    background-image: url(../images/39.jpg);
+    background-image: url(/images/39.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
