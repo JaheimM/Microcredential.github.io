@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script
+      src="https://kit.fontawesome.com/2b844ee23b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <!-- Mobile Navigation -->
+    <section class="mobile_nav">
+      <div><i class="fa-solid fa-circle-xmark fa-2x"></i></div>
+      <div>
+        <div class="logo2">
+          <h1><a href="index.html">Home</a></h1>
+        </div>
+        <div class="links2">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="cart2">
+              <a href="cart.html"
+                ><i class="fa-solid fa-cart-shopping"><span></span></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <nav>
+        <div class="logo">
+          <h1><a href="index.html">Home</a></h1>
+        </div>
+        <div class="links">
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#shop">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="cart">
+              <a href="cart.html"
+                ><i class="fa-solid fa-cart-shopping"><span>0</span></i></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="container hamburger">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </nav>
+    </section>
+    <main>
+      <div class="items_container">
+        <div class="item_header">
+          <h5 class="item_title">ITEM</h5>
+          <h5 class="price">PRICE</h5>
+          <h5 class="quantity">QUANTITY</h5>
+          <h5 class="total">TOTAL</h5>
+        </div>
+        <div class="items_buy"></div>
+      </div>
+      <button class="continue"><a href="checkout.html">CHECKOUT</a></button>
+    </main>
+
+    <!-- Temporary js -->
+    <script src="cart.js"></script>
+    <!--  <script>
+      let icon = document.querySelector(".container");
+
+      icon.addEventListener("click", () => {
+        icon.classList.toggle("change");
+      });
+
+      let addToCart = document.querySelectorAll(".add");
+      let cartNums = document.querySelector(".cart span");
+
+      // Loop that iterates for every item added to the bag
+      for (let i = 0; i < addToCart.length; i++) {
+        addToCart[i].addEventListener("click", () => {
+          cartNum(itemsInfo[name]);
+        });
+      }
+
+      // When website is loaded will append the current number of items in bag from previous local storage
+
+      function cartNum() {
+        let itemNum = localStorage.getItem("cartNum");
+
+        itemNum = parseInt(itemNum);
+
+        if (itemNum) {
+          localStorage.setItem("cartNum", itemNum + 1);
+          cartNums.textContent = itemNum + 1;
+        } else {
+          localStorage.setItem("cartNum", 1);
+          cartNums.textContent = 1;
+        }
+      }
+
+      function loadCartNum() {
+        let itemNum = localStorage.getItem("cartNum");
+
+        if (itemNum) {
+          cartNums.textContent = itemNum;
+        }
+      }
+
+      loadCartNum();
+    </script> -->
+  </body>
+</html>
