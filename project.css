@@ -418,6 +418,13 @@ Show more styles
     padding: 0.5rem;
 }
 
+.items img:hover {
+    box-shadow: 60px 50px 80px black;
+    transform: translatey(-1.3em);
+    transition: transform 0.5s;
+}
+
+
 .modalWin1,
 .modalWin2, .modalWin3,
 .modalWin4,
