@@ -159,7 +159,7 @@ main {
 .background-image {
     height: 55em;
     width: 100%;
-    background-image: url(../images/39.jpg);
+    background-image: url(images/39.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -416,6 +416,12 @@ Show more styles
     width: 300px;
     height: 472px;
     padding: 0.5rem;
+}
+
+.items img:hover {
+    box-shadow: 60px 50px 80px black;
+    transform: translatey(-1.3em);
+    transition: transform 0.5s;
 }
 
 .modalWin1,
@@ -719,6 +725,46 @@ h4 {
     width: 50%;
 }
 
+.thankyou_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 50%;
+}
+
+.border {
+    border: 0.3em double var(--book-color2);
+    width: 80%;
+    margin: 0 auto;
+}
+.flex h1, .flex h2{
+    color: var(--book-color);
+    margin: 0.2em auto;
+}
+
+.flex p {
+    color: #fff12d;
+}
+
+.thankyou {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.thankyou img {
+    width: 30%;
+}
+
 
 
 @media  screen and (max-width: 1920px) {
@@ -786,4 +832,16 @@ h4 {
     .shop {
         font-size: 1rem;
     }
+
+    .flex h1,
+    .flex h2 {
+        font-size: 1.5rem;
+    }
+
+    .thankyou img {
+        height: 100%;
+        width: 60%;
+    }
+
 }
+
