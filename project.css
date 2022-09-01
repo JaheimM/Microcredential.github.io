@@ -294,6 +294,7 @@ Show more styles
     right: 0px;
     opacity: 0;
     pointer-events: none;
+    z-index: 1;
 }
 
 .modalWindow:target {
@@ -442,8 +443,8 @@ Show more styles
 .modalWin2 hr,
 .modalWin3 hr,
 .modalWin4 hr,
-.modalWin5 h4, 
-.modalWin6 hr{
+.modalWin5 hr, 
+.modalWin6 hr {
     margin-top: 5%;
     height: 1%;
     width: 80%;
@@ -462,17 +463,17 @@ Show more styles
     transition: ease-in-out 0.5s;
 }
 
-.modalWin1 h2,
+/* .modalWin1 h2,
 .modalWin2 h2,
-.modalWin3 h3, 
+.modalWin3 h2, 
 .modalWin4 h2, 
-.modalWin5 h3, 
+.modalWin5 h2, 
 .modalWin6 h2{
     position: relative;
     top: 5%;
     left: 10%;
     font-size: 24px;
-}
+} */
 
 .in {
     display: flex;
@@ -543,9 +544,10 @@ Show more styles
 }
 
 .footer p {
-    position: relative;
-    top: 60%;
-    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 
